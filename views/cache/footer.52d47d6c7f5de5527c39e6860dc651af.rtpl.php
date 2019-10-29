@@ -4,12 +4,12 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
-                        <h2>Hcode Store</h2>
+                        <h2>Itech Sys</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
                         <div class="footer-social">
-                            <a href="https://www.facebook.com/hcodebr" target="_blank"><i class="fa fa-facebook"></i></a>
-                            <a href="https://twitter.com/hcodebr" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/channel/UCjWENuSH2gX55-y7QSZiWxA" target="_blank"><i class="fa fa-youtube"></i></a>
+                            <a href="https://www.facebook.com/itech.sys.ms" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/alexandrecarlus" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UC0akmLde60AT7cN9sJyruYA" target="_blank"><i class="fa fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -38,12 +38,12 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
-                        <h2 class="footer-wid-title">Newsletter</h2>
+                        <h2 class="footer-wid-title">Notícias</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus!</p>
                         <div class="newsletter-form">
                             <form action="#">
-                                <input type="email" placeholder="Type your email">
-                                <input type="submit" value="Subscribe">
+                                <input type="email" placeholder="Insira seu email">
+                                <input type="submit" value="Inscrever">
                             </form>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2017 Hcode Treinamentos. <a href="http://www.hcode.com.br" target="_blank">hcode.com.br</a></p>
+                        <p>&copy; 2019 Itech Sys. <a href="https://www.facebook.com/itech.sys.ms" target="_blank">facebook.com/itech.sys.ms</a></p>
                     </div>
                 </div>
                 
