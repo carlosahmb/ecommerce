@@ -1,8 +1,10 @@
 <?php 
 
-use Hcode\PageAdmin;
-use Hcode\Model\User;
-use Hcode\Model\Product;
+use \Hcode\PageAdmin;
+use \Hcode\Model\User;
+use \Hcode\Model\Category;
+use \Hcode\Model\Product;
+
 
 $app->get("/admin/products", function(){
 
@@ -36,7 +38,7 @@ $app->post("/admin/products/create", function(){
 
 	$product->save();
 
-	$product->setPhoto($_FILES["file"]);
+	//$product->setPhoto($_FILES["file"]);
 
 	header("Location: /admin/products");
 	exit;

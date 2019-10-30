@@ -53,7 +53,7 @@
               <label for="desurl">URL</label>
               <input type="text" class="form-control" id="desurl" name="desurl">
             </div>
-            <div class="form-group">
+            <!--<div class="form-group">
               <label for="file">Foto</label>
               <input type="file" class="form-control" id="file" name="file">
               <div class="box box-widget">
@@ -61,7 +61,7 @@
                   <img class="img-responsive" id="image-preview" alt="Photo">
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <!-- /.box-body -->
           <div class="box-footer">

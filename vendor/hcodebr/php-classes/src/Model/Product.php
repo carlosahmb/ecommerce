@@ -1,6 +1,7 @@
 <?php 
 
 namespace Hcode\Model;
+
 use \Hcode\DB\Sql;
 use \Hcode\Model;
 use \Hcode\Mailer;
@@ -10,13 +11,26 @@ use \Hcode\Mailer;
 //classe model tem getters e setters
 class Product extends Model{
 
-	
-
 	public function listAll(){
 
 		$sql = new Sql();
 
 		return $sql->select("SELECT * FROM tb_products ORDER BY desproduct");
+	}
+
+	public static function checkList($list){
+
+		foreach ($list as &$row) {
+
+			$p = new Product();
+			$p->setData($row);
+			$row = $p->getValues();
+			
+		}
+
+		return $list;
+
+
 	}
 
 
