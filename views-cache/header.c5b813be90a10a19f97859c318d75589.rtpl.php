@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hcode Store</title>
+    <title>Itech Sys Ecommerce</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -42,7 +42,7 @@
                         <ul>
                             <li><a href="#"><i class="fa fa-user"></i> Minha Conta</a></li>
                             <li><a href="#"><i class="fa fa-heart"></i> Lista de Desejos</a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i> Meu Carrinho</a></li>
+                            <li><a href="/cart"><i class="fa fa-shopping-cart"></i> Meu Carrinho</a></li>
                             <li><a href="#"><i class="fa fa-lock"></i> Login</a></li>
                         </ul>
                     </div>
@@ -106,7 +106,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="/">Home</a></li>
-                        <li><a href="/products">Produtos</a></li>
+                        <li><a href="/productsAll">Produtos</a></li>
                         <li><a href="/cart">Carrinho</a></li>
                     </ul>
                 </div>  
