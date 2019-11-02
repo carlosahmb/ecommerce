@@ -209,6 +209,13 @@ $app->get("/logout", function(){
 
 	User::logout();
 
+	$_SESSION['registerValues'] = NULL;
+        $_SESSION['registerValues'] = [
+            'name'=>NULL,
+            'email'=>NULL,
+            'phone'=>NULL
+        ];
+
 	header("Location: /login");
 	exit;
 
