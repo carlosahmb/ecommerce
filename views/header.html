@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Itech Sys Ecommerce</title>
+    <link rel="shortcut icon" href="/res/site/img/favicon.ico" type="image/x-icon"/>
+
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -40,12 +42,12 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> Minha Conta</a></li>
-                            <li><a href="#"><i class="fa fa-heart"></i> Lista de Desejos</a></li>
-                            <li><a href="/cart"><i class="fa fa-shopping-cart"></i> Meu Carrinho</a></li>
+                            <li><a href="#"><i class="fa fa-user" style="color: rgb(0,0,139)"></i> Minha Conta</a></li>
+                            <li><a href="#"><i class="fa fa-heart" style="color: rgb(250,128,114)"></i> Lista de Desejos</a></li>
+                            <li><a href="/cart"><i class="fa fa-shopping-cart" style="color: rgb(255,215,0)"></i> Meu Carrinho</a></li>
                             {if="checkLogin(false)"}
-                            <li><a href="/profile"><i class="fa fa-user"></i> {function="getUserName()"}</a></li>
-                            <li><a href="/logout"><i class="fa fa-close"></i> Sair</a></li>
+                            <li><a href="/profile"><i class="fa fa-user" style="color: rgb(0,128,0)"></i> {function="getUserName()"}</a></li>
+                            <li><a href="/logout"><i class="fa fa-close" style="color: rgb(255,0,0)"></i> Sair</a></li>
                             {else}
                             <li><a href="/login"><i class="fa fa-lock"></i> Login</a></li>
                             {/if}
