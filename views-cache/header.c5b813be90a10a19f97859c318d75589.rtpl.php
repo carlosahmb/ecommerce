@@ -42,7 +42,7 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user" style="color: rgb(0,0,139)"></i> Minha Conta</a></li>
+                            <li><a href="/profile"><i class="fa fa-user" style="color: rgb(0,0,139)"></i> Minha Conta</a></li>
                             <li><a href="#"><i class="fa fa-heart" style="color: rgb(250,128,114)"></i> Lista de Desejos</a></li>
                             <li><a href="/cart"><i class="fa fa-shopping-cart" style="color: rgb(255,215,0)"></i> Meu Carrinho</a></li>
                             <?php if( checkLogin(false) ){ ?>

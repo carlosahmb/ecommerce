@@ -384,7 +384,7 @@
           <div class="content">
             <span class="brand">
               <a href="#">
-                Carlos Ecommerce
+                Itech Sys Ecommerce
               </a>
             </span>
           </div>

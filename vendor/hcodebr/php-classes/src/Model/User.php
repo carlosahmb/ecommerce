@@ -15,6 +15,7 @@ class User extends Model{
 	const SECRET_IV = "HcodePhp7_Secret_IV";
 	const ERROR = "UserError";
 	const ERROR_REGISTER = "UserErrorRegister";
+	const SUCCESS = "UserSuccess";
 
 	public static function getFromSession(){
 
@@ -175,7 +176,7 @@ class User extends Model{
 		));
 	}
 
-	public static function getForgot($email){
+	public static function getForgot($email, $inadmin = true){
 
 		$sql = new Sql();
 		$results = $sql->select("SELECT * FROM tb_persons a INNER JOIN tb_users b USING(idperson) WHERE a.desemail = :email", array(
@@ -201,7 +202,15 @@ class User extends Model{
 
 				$code = base64_encode($code);
 
+				if($inadmin === true){
+
 					$link = "http://www.carlos-ecommerce.com.br/admin/forgot/reset?code=$code";	
+
+				} else {
+
+					$link = "http://www.carlos-ecommerce.com.br/forgot/reset?code=$code";
+
+				}
 
 				$mailer = new Mailer($data['desemail'], $data['desperson'], "Redefinir senha da Carlos Ecommerce", "forgot", array(
 					"name"=>$data['desperson'],
@@ -320,6 +329,26 @@ class User extends Model{
 	public static function getPasswordHash($password){
 
 		return password_hash($password, PASSWORD_DEFAULT, ['cost'=>12]);
+	}
+
+
+public static function setSuccess($msg){
+
+		$_SESSION[User::SUCCESS] = $msg;
+	}
+
+	public static function getSuccess(){
+
+		$msg = (isset($_SESSION[User::SUCCESS]) && $_SESSION[User::SUCCESS]) ? $_SESSION[User::SUCCESS] : '';
+
+		User::clearSuccess();
+
+		return $msg;
+	}
+
+	public static function clearSuccess(){
+
+		$_SESSION[User::SUCCESS] = NULL;
 	}
 
 }

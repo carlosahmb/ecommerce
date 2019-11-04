@@ -7,7 +7,7 @@ class Mailer{
 
 	const USERNAME = "carlosahmb@gmail.com";
 	const PASSWORD = "senha666";
-	const NAME_FROM = "Carlos Ecommerce";
+	const NAME_FROM = "Itech Sys Ecommerce";
 
 	private $mail;
 
