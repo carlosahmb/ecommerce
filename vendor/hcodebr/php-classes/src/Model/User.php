@@ -5,8 +5,6 @@ use \Hcode\DB\Sql;
 use \Hcode\Model;
 use \Hcode\Mailer;
 
-
-
 //classe model tem getters e setters
 class User extends Model{
 
@@ -106,6 +104,7 @@ class User extends Model{
 	public static function logout(){
 
 		$_SESSION[User::SESSION] = NULL;
+
 	}
 
 	public function listAll(){

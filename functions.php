@@ -42,5 +42,7 @@ function getCartVlSubtotal(){
 
 	return formatPrice($totals['vlprice']);
 }
+
+
 ?>
 
