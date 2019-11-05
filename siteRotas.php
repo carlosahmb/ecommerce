@@ -601,7 +601,7 @@ $app->get("/profile/orders", function (){
 
 });
 
-$app->get("/profile/orders/:idorder", function(){
+$app->get("/profile/orders/:idorder", function($idorder){
 
 	User::verifyLogin(false);
 
@@ -609,10 +609,18 @@ $app->get("/profile/orders/:idorder", function(){
 
 	$order->get((int)$idorder);
 
+	$cart = new Cart();
+
+	$cart->get((int)$order->getidcart());
+
+	$cart->getCalculateTotal();
+
 	$page = new Page();
 
-	$page->setTpl("profile-orders", [
-		'order'=>$order->getValues()
+	$page->setTpl("profile-orders-detail", [
+		'order'=>$order->getValues(),
+		'cart'=>$cart->getValues(),
+		'products'=>$cart->getProducts()
 	]);
 
 });
