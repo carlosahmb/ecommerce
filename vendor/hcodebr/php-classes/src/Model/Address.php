@@ -56,7 +56,7 @@ class Address extends Model {
 
 		$sql = new Sql();
 
-		$results = $sql->select("CALL sp_address_save(:idaddress, :idperson, :desaddresss, :descomplement, :descity, :desstate, :descountry, :deszipcode, :desdistrict)", [
+		$results = $sql->select("CALL sp_addresses_save(:idaddress, :idperson, :desaddresss, :descomplement, :descity, :desstate, :descountry, :deszipcode, :desdistrict)", [
 			'idaddress'=>$this->getidaddress(),
 			'idperson'=>$this->getidperson(),
 			'desaddresss'=>utf8_decode($this->getdesaddresss()),
