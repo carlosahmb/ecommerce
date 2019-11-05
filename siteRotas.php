@@ -488,7 +488,7 @@ $user = User::getFromSession();
 
 $user->setData($_POST);
 
-$user->save();
+$user->update();
 
 User::getSuccess("Dados alterados com sucesso!");
 
@@ -587,5 +587,34 @@ $app->get("/boleto/:idorder", function($idorder){
 
 });
 
+$app->get("/profile/orders", function (){
+
+	User::verifyLogin(false);
+
+	$user = User::getFromSession();
+
+	$page = new Page();
+
+	$page->setTpl("profile-orders", [
+		'orders'=>$user->getOrders()
+	]);
+
+});
+
+$app->get("/profile/orders/:idorder", function(){
+
+	User::verifyLogin(false);
+
+	$order = new Order();
+
+	$order->get((int)$idorder);
+
+	$page = new Page();
+
+	$page->setTpl("profile-orders", [
+		'order'=>$order->getValues()
+	]);
+
+});
 
  ?>

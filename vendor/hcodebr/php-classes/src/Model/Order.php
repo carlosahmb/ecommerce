@@ -49,6 +49,7 @@ class Order extends Model{
 		}
 
 	}
+
 }
 
  ?>
