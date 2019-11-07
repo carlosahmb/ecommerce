@@ -4,6 +4,66 @@ use Hcode\PageAdmin;
 use Hcode\Model\User;
 
 
+
+$app->get("/admin/users/:iduser/password", function($iduser){
+
+	User::verifyLogin();
+
+	$user = new User();
+
+	$user->get((int)$iduser);
+
+	$page = new PageAdmin();
+
+	$page->setTpl("users-password", [
+		'user'=>$user->getValues(),
+		'msgError'=>User::getError(),
+		'msgSuccess'=>User::getSuccess()
+	]);
+
+});
+
+$app->post("/admin/users/:iduser/password", function($iduser){
+
+	User::verifyLogin();
+
+	if (!isset($_POST['new_pass']) || $_POST['new_pass'] === '') {
+
+		User::setError("Digite a nova senha.");
+		header("Location: /admin/users/$iduser/password");
+		exit;
+
+	}
+
+	if (!isset($_POST['new_pass_confirm']) || $_POST['new_pass_confirm'] === '') {
+
+		User::setError("Preencha a confirmação da nova senha.");
+		header("Location: /admin/users/$iduser/password");
+		exit;
+
+	}
+
+	if ($_POST['new_pass'] !== $_POST['new_pass_confirm']) {
+
+		User::setError("Confirme a nova senha corretamente.");
+		header("Location: /admin/users/$iduser/password");
+		exit;
+
+	}
+
+	$user = new User();
+
+	$user->get((int)$iduser);
+
+	$user->setPassword(User::getPasswordHash($_POST['new_pass']));
+
+	User::setSuccess("Senha alterada com sucesso!");
+		header("Location: /admin/users/$iduser/password");
+		exit;	
+
+
+});
+
 $app->get("/admin/users", function(){
 
 	User::verifyLogin();
