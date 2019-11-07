@@ -203,7 +203,7 @@ $app->get("/checkout", function(){
 		'cart'=>$cart->getValues(),
 		'address'=>$address->getValues(),
 		'products'=>$cart->getProducts(),
-		'error'=>Address::getMsgError()
+		'checkoutError'=>Address::getMsgError()
 	]);
 
 });
@@ -220,6 +220,12 @@ $app->post("/checkout", function(){
 
 	if (!isset($_POST['desaddress']) || $_POST['desaddress'] === '') {
 		Address::setMsgError("Informe o endereço.");
+		header('Location: /checkout');
+		exit;
+	}
+
+	if (!isset($_POST['desnumber']) || $_POST['desnumber'] === '') {
+		Address::setMsgError("Informe o número.");
 		header('Location: /checkout');
 		exit;
 	}
